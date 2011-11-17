@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/*
+ * floatさせたボックスが親ボックスの外にはみ出さないようにする方法
+ * http://positioniseverything.net/easyclearing.html
+ */
+
+.clearfix {
+/* 領域を確認する場合ここをコメントアウトする */
+/* border: 3px solid #f00; */
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {display: inline-table;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/* 一覧 */
+.settings_controller table.list {
+}
+
+/* すべてのカラム */
+.settings_controller .var_name {}
+.settings_controller .var_value {}
+
+/* テーブル内の個々のカラム */
+.settings_controller table.list .var_name {}
+.settings_controller table.list .var_value {}
+
+/* 詳細のカラム */
+.settings_controller.show_action .var_name {}
+.settings_controller.show_action .var_value {}

@@ -1,0 +1,26 @@
+<!-- マウスオーバーしたときゆっくり輝度を変更するには？ -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#main *").hover(
+          function(){
+            $(this).animate({opacity: 0.6});
+          },
+           function(){
+            $(this).animate({opacity: 1.0});
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="main">
+      <img src="assets/rails.png" />
+      <span>あいうえお</span>
+      <button>あいうえお</button>
+    </div>
+  </body>
+</html>

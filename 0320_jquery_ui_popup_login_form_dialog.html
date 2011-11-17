@@ -1,0 +1,47 @@
+<!-- ポップアップでログインフォームを表示するには？ -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="assets/jquery.ui/themes/redmond/jquery-ui-1.8.16.custom.css" media="screen" rel="Stylesheet" type="text/css" />
+    <style>
+      input.text { margin-bottom:12px; width:95%; padding: .4em; }
+      fieldset { padding:0; border:0; margin-top:25px; }
+      label {font-size: 80%}
+    </style>
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.ui/ui/jquery-ui-1.8.16.custom.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#dialog:ui-dialog").dialog("destroy");
+        $("#main").dialog({
+          autoOpen: false, // 裏で起動しておくので display: none の設定が不要になる
+          height: 300,
+          width: 350,
+          modal: true,
+          buttons: {
+             "ログイン": function() {
+                 $(this).dialog("close");
+              }
+          }});
+
+        $("#do_login").click(function() {
+          $("#main").dialog("open");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="main" title="ログイン">
+      <form>
+        <fieldset>
+          <label for="login">ログイン名</label>
+          <input type="text" name="login" id="login" value="" class="text ui-widget-content ui-corner-all" />
+          <label for="password">パスワード</label>
+          <input type="text" name="password" id="password" value="" class="text ui-widget-content ui-corner-all" />
+        </fieldset>
+      </form>
+    </div>
+    <a href="#" id="do_login">ログインする</a>
+  </body>
+</html>

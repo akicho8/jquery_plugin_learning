@@ -1,0 +1,20 @@
+<!-- 一部の領域をまるごと目立たなくするには？ -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="assets/jquery.ui/themes/redmond/jquery-ui-1.8.16.custom.css" media="screen" rel="Stylesheet" type="text/css" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.ui/ui/jquery-ui-1.8.16.custom.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#main").css("opacity", 0.5);
+        $("#main").draggable();
+      });
+    </script>
+  </head>
+  <body>
+    気軽に半透明を使う
+    <div id="main">重要でない項目を目立たないようにする</div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!-- 狭い領域に複数のコンテンツを詰め込みたい -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="assets/jquery.ui/themes/redmond/jquery-ui-1.8.16.custom.css" media="screen" rel="Stylesheet" type="text/css" />
+    <style type="text/css">
+      #main {width: 320px; height: 320px}
+    </style>
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.ui/ui/jquery-ui-1.8.16.custom.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#main").accordion();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="main">
+      <h3><a href="#">タイトル1</a></h3>
+      <div>コンテンツ</div>
+      <h3><a href="#">タイトル2</a></h3>
+      <div>コンテンツ</div>
+      <h3><a href="#">タイトル3</a></h3>
+      <div>コンテンツ</div>
+    </div>
+  </body>
+</html>

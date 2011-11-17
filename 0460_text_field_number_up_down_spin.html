@@ -1,0 +1,18 @@
+<!-- 1000単位で切り替わるスピンボタンをつけるには？ -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery-spin.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $.spin.imageBasePath = "assets/spin1/";
+        $("#main").spin({interval: 1000});
+      });
+    </script>
+  </head>
+  <body>
+    <input type="text" id="main" value="0" />
+  </body>
+</html>

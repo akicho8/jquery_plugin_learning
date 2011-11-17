@@ -1,0 +1,54 @@
+/* for will_paginate */
+/* div.pagination {margin-top:8px;} */
+
+/* for advanced_scaffold */
+.list_index_number { text-align: center }
+table.list th { text-align: center; white-space: nowrap }
+table.list td { text-align: center; white-space: nowrap }
+
+/* redmineの白いコンテンツ部分を確実に囲む(clearfixの代替指定) */
+#content {
+  overflow: auto;
+}
+
+/* for jquery.my.tabswitch.js */
+/* デバッグ時には以下を無効にして */
+.active   { display: block; }
+.inactive { display: none;  }
+/* こっちを有効にすると切り替わりが確認しやすい */
+/* .active   { padding: 8px; background: #aaF; } */
+/* .inactive { padding: 8px; background: #eeF; } */
+
+/* redmine風formで radio_button2 を使ったときにラベルが分断されるのを回避 */
+form p label.inline {
+  white-space: nowrap;
+}
+
+/* squeejee テーマ調整 */
+.squeejee_theme table.list thead th {
+  font-size: 8px;
+}
+
+/* watersky テーマ調整 */
+.watersky_theme #main-menu li a,
+.watersky_theme #main-menu li a:hover,
+.watersky_theme #main-menu li a:active,
+.watersky_theme #main-menu li a.selected,
+.watersky_theme #main-menu li a.selected:hover {
+  padding: 4px 6px 0 22px;
+}
+
+/* Modula Mojito テーマ調整 */
+/* タブメニューの下に1ドット隙間があるのを消す。 */
+/* どれも選択されてないと下の線が出ない。選択されているときだけ直る */
+.modula_mojito_theme #content .tabs ul li a {
+  border-bottom-width: 0px;
+}
+
+/* 全体の設定 */
+body {
+  /* すべてにおいてメイリオ優先 */
+  font-family: Meiryo, "Hiragino Kaku Gothic Pro", "MS PGothic", Verdana, sans-serif;
+  /* 横幅をつっぱらない */
+  min-width: 0px;
+}

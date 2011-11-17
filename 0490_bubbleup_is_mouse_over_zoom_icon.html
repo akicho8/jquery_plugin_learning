@@ -1,0 +1,21 @@
+<!-- マウスオーバーすると画像を少し大きくしたい -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="assets/jquery.bubbleup.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.bubbleup.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#main img").bubbleup({tooltip: true, scale:60});
+      });
+    </script>
+  </head>
+  <body>
+    <ul id="main">
+      <li><a href="#"><img src="assets/rails.png" alt="Rails"/></a></li>
+      <li><a href="#"><img src="assets/niconico.gif" alt="ニコニコ動画"/></a></li>
+    </ul>
+  </body>
+</html>

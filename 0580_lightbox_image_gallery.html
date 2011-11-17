@@ -1,0 +1,29 @@
+<!-- lightboxのjQuery版はある？ -->
+<!-- エフェクトを切ることができないっぽい -->
+<!-- すぐに起動できない -->
+<!-- 使うならcolorboxの方がいい -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="assets/jquery.lightbox-0.5.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.lightbox-0.5.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#main a").lightBox(); // この時点では起動しない
+        $("#do_exec").click(function(){$("#main a:first").click()});
+      });
+    </script>
+  </head>
+  <body>
+    <a href="#" id="do_exec">画像を見る</a>
+    <div id="main" style="display:none">
+      <a href="assets/anohana/01.jpg" title="タイトル1">1</a>
+      <a href="assets/anohana/02.jpg" title="タイトル2">2</a>
+      <a href="assets/anohana/03.jpg" title="タイトル3">3</a>
+      <a href="assets/anohana/04.jpg" title="タイトル4">4</a>
+      <a href="assets/anohana/05.jpg" title="タイトル5">5</a>
+    </div>
+  </body>
+</html>

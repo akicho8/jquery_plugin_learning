@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Simple Test</title>
+  <link rel="stylesheet" type="text/css" href="../jquery.jqplot.css" />
+  <link rel="stylesheet" type="text/css" href="examples.css" />
+  <script language="javascript" type="text/javascript" src="../jquery-1.4.4.min.js"></script>
+  <script language="javascript" type="text/javascript" src="../jquery.jqplot.js"></script>
+  <script language="javascript" type="text/javascript" src="../plugins/jqplot.highlighter.js"></script>
+  <script language="javascript" type="text/javascript" src="../plugins/jqplot.barRenderer.js"></script>
+  <script language="javascript" type="text/javascript" src="../plugins/jqplot.categoryAxisRenderer.js"></script>
+  <style type="text/css" media="screen">
+    .jqplot-axis {
+      font-size: 0.85em;
+    }
+    .jqplot-title {
+      font-size: 1.1em;
+    }
+    .jqplot-y6axis-tick {
+      padding-right: 0px;
+    }
+  </style>
+  <script type="text/javascript" language="javascript">
+  
+  $(document).ready(function(){
+    $.jqplot.config.enablePlugins = true;
+
+    var l1 = [ 8,  4, 2,   1];
+    var l2 = [10, 20, 40, 80];
+    plot1 = $.jqplot('chart1', [l1, l2], {
+      series:[{"renderer":$.jqplot.BarRenderer}, {yaxis:'y2axis'}],
+      axes: {
+          xaxis: {
+              renderer: $.jqplot.CategoryAxisRenderer,
+          },
+      },
+    });
+
+  });
+  </script>
+  </head>
+  <body>
+    <div id="chart1" style="margin-top:20px; margin-left:20px; width:700px; height:300px;"></div>
+  </body>
+</html>

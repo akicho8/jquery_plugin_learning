@@ -1,0 +1,26 @@
+<!-- lightbox_meで別のページを表示するには？ -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style type="text/css">
+      #main {display: none}
+    </style>
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.lightbox_me.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#do_exec").click(function() {
+          $("#main").lightbox_me({
+            centered: true,
+            overlayCSS: {background: "black", opacity: 0.8},
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a href="#" id="do_exec">ニコニコ動画</a>
+    <iframe id="main" src="http://www.nicovideo.jp/ranking" frameborder="0" width="80%" height="80%" scrolling="no"></iframe>
+  </body>
+</html>
