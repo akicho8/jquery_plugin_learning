@@ -1,0 +1,19 @@
+<!-- 指定の機能を1回または繰り返し実行するには？ -->
+<!-- 開発者用。覚えとくといざというとき楽かも -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.timers.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#main").oneTime(1000, "labelA", function(){$("#main").append("1秒後に一回だけ実行<br/>")});
+        $("#main").everyTime(2000, "labelB", function(){$("#main").append("2秒毎に実行<br/>")});
+      });
+    </script>
+  </head>
+  <body>
+    <div id="main"></div>
+  </body>
+</html>

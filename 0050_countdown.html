@@ -1,0 +1,23 @@
+<!-- 指定した日までカウントダウンするには？ -->
+<!-- グルーポンみたいなサイトで使われていた -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="assets/jquery.countdown.css" media="screen" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="assets/jquery.js"></script>
+    <script type="text/javascript" src="assets/jquery.countdown.js"></script>
+    <script type="text/javascript" src="assets/jquery.countdown-ja.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        var austDay = new Date();
+        austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
+        $('#main').countdown({until: austDay});
+        $('#year').text(austDay.getFullYear());
+      });
+    </script>
+  </head>
+  <body>
+    <div id="main"></div>
+  </body>
+</html>

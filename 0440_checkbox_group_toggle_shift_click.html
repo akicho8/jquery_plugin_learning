@@ -1,0 +1,23 @@
+<!-- チェックボックスをまとめてトグルするには？ -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.shiftclick.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("input:checkbox").shiftclick();
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li><input type="checkbox" id="cb1" /><label for="cb1">Label1</label></li>
+      <li><input type="checkbox" id="cb2" /><label for="cb2">Label2</label></li>
+      <li><input type="checkbox" id="cb3" /><label for="cb3">Label3</label></li>
+      <li><input type="checkbox" id="cb4" /><label for="cb4">Label4</label></li>
+      <li><input type="checkbox" id="cb5" /><label for="cb5">Label5</label></li>
+    </ul>
+  </body>
+</html>

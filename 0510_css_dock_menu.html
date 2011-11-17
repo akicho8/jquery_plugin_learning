@@ -1,0 +1,35 @@
+<!-- MacのDock風メニューを作るには？ -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="assets/jquery.css_dock_menu.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.css_dock_menu.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#dock").Fisheye({
+          maxWidth: 50,
+          items: "a",
+          itemsText: "span",
+          container: ".dock-container",
+          itemWidth: 40,
+          proximity: 90,
+          halign : "center",
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="dock" id="dock">
+      <div class="dock-container">
+        <a class="dock-item" href="#"><img src="images/css_dock_menu/email.png" alt="contact" /><span>メール</span></a> 
+        <a class="dock-item" href="#"><img src="images/css_dock_menu/music.png" alt="music" /><span>音楽</span></a> 
+        <a class="dock-item" href="#"><img src="images/css_dock_menu/video.png" alt="video" /><span>動画</span></a> 
+        <a class="dock-item" href="#"><img src="images/rails.png" alt="video" /><span>Rails</span></a> 
+        <a class="dock-item" href="#"><img src="images/niconico.gif" alt="video" /><span>ニコニコ動画</span></a> 
+        <a class="dock-item" href="#"><img src="images/nichijo.jpg" alt="video" /><span>日常</span></a> 
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!-- マーキー使用時にマウスオーバーで停止したりするには？ -->
+<!-- 標準の機能よりスムーズに動かせる -->
+<!-- 設定次第でマウスで左右にドラッグできたりも -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.marquee.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#main").marquee("pointer").mouseover(function(){
+          $(this).trigger("stop");
+        }).mouseout(function () {
+          $(this).trigger("start");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <marquee behavior="scroll" scrollamount="1" direction="left" width="160" id="main">
+      親譲りの無鉄砲で小供の時から損ばかりしている。
+    </marquee>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!-- 書式付き日付表示のstrftimeを使うには？ -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.strftime.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        var time = new Date();
+        $("#main").strftime("%Y-%m-%d %H:%M:%S (%a)", time)
+      });
+    </script>
+  </head>
+  <body>
+    <div id="main"></div>
+  </body>
+</html>

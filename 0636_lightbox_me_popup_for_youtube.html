@@ -1,0 +1,25 @@
+<!-- lightbox_meでYoutube動画をポップアップするには？ -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.lightbox_me.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#do_exec").click(function() {
+          $("#main").lightbox_me({
+            centered: true,
+            overlayCSS: {background: "pink", opacity: 0.8},
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a href="#" id="do_exec">Mai Kurihara's Yo-Yo Show 2010/栗原舞のヨーヨー−静岡大道芸ワールドカップ2010</a>
+    <div id="main" style="display: none">
+      <iframe width="640" height="510" src="http://www.youtube.com/embed/TecVgDJO4cM" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </body>
+</html>

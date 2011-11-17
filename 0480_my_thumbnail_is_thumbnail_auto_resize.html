@@ -1,0 +1,25 @@
+<!-- サムネイルのサイズを自動的にそろえるには？ -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="assets/MyThumbnail.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.MyThumbnail.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#main img").MyThumbnail();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="main">
+      <image src="images/anohana/01.jpg" />
+      <image src="images/anohana/02.jpg" />
+      <image src="images/anohana/03.jpg" />
+      <image src="images/anohana/04.jpg" />
+      <image src="images/anohana/05.jpg" />
+      <image src="images/anohana/06.jpg" />
+    </div>
+  </body>
+</html>

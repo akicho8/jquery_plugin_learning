@@ -1,0 +1,26 @@
+<!-- 角丸にするには？ -->
+<!-- IEにも対応 -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.corner.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#main").corner("effect corners width:8px");
+      });
+    </script>
+    <style type="text/css">
+      #main {
+        margin: 32px;
+        width: 160px;
+        height: 160px;
+        background: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main"></div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!-- 一つの領域に複数のコンテンツを順に表示するときのエフェクトが邪魔 -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.cycle.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#main").cycle({timeout: 1000, speed: 0});
+      });
+    </script>
+  </head>
+  <body>
+    <div id="main">
+      <span>あいうえお</span>
+      <span>かきくけこ</span>
+    </div>
+  </body>
+</html>

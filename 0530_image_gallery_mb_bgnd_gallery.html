@@ -1,0 +1,58 @@
+<!-- 背景で画像を切り替えるには？ -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style type="text/css">
+      .paginate{position:absolute;color:black;z-index:9999}
+    </style>
+    <link href="assets/mb.bgndGallery.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/mb.bgndGallery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $.mbBgndGallery.buildGallery({
+          // containment:"#wrapper",
+          containment:"body",
+          effect:{enter:{top:"100%",opacity:1},exit:{top:"-100%",opacity:1}},
+          timer:3000,
+          effTimer:500,
+          raster:"images/raster.png", // ラスター画像を上に被せるとおしゃれ
+          controls:"#controls",
+          images:[
+            "images/gallery/0001.jpg",
+            "images/gallery/0002.jpg",
+            "images/gallery/0003.jpg",
+            "images/gallery/0004.jpg",
+            "images/gallery/0005.jpg",
+            "images/gallery/0006.jpg",
+            "images/gallery/0007.jpg",
+            "images/gallery/0008.jpg",
+            "images/gallery/0009.jpg",
+            "images/gallery/0010.jpg",
+          ],
+          autoStart:false,
+          onStart:function(){$("#controls .play").show();$("#controls .pause").hide();},
+          onPause:function(){$("#controls .play").show();$("#controls .pause").hide();},
+          onPlay:function(o){$("#controls .play").hide();$("#controls .pause").show();o.effect={enter:{top:"100%",opacity:1},exit:{top:"-100%",opacity:1}}},
+          onNext:function(o){o.effect={enter:{top:"100%",opacity:1},exit:{top:"-100%",opacity:1}}},
+          onPrev:function(o){o.effect={enter:{top:"-100%",opacity:1},exit:{top:"100%",opacity:1}}}
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="text">
+        <p style="font-size: 400%">背景で画像を切り替えるには？</p>
+        <div id="controls">
+          <div class="pause">pause</div>
+          <div class="play">play</div>
+          <div class="prev">prev</div>
+          <div class="next">next</div>
+          <div class="counter"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

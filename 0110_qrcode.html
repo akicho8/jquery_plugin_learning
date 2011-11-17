@@ -1,0 +1,18 @@
+<!-- QRCODEを表示するには？ -->
+<!-- 日本語に対応してない -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.qrcode.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#main").qrcode("Hello World");
+      });
+    </script>
+  </head>
+  <body>
+    <div id="main"></div>
+  </body>
+</html>

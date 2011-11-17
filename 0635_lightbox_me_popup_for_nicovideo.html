@@ -1,0 +1,27 @@
+<!-- lightbox_meでニコニコ動画をポップアップするには？ -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style type="text/css">
+    </style>
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.lightbox_me.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#do_exec").click(function() {
+          $("#main").lightbox_me({
+            centered: true,
+            overlayCSS: {background: "black", opacity: 0.8},
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a href="#" id="do_exec">【ニコニコ動画】魔法少女まどか☆エキプロ OP</a>
+    <div id="main" style="display: none">
+      <script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/sm13958386"></script><noscript><a href="http://www.nicovideo.jp/watch/sm13958386">【ニコニコ動画】魔法少女まどか☆エキプロ OP</a></noscript>
+    </div>
+  </body>
+</html>

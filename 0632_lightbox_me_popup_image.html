@@ -1,0 +1,26 @@
+<!-- lightbox_meで画像をポップアップするには？ -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style type="text/css">
+      img {display: none}
+    </style>
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.lightbox_me.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#do_exec").click(function() {
+          $("#main").lightbox_me({
+            centered: true,
+            overlayCSS: {background: "black", opacity: 0.3},
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a href="#" id="do_exec">画像を見る</a>
+    <img id="main" src="images/anohana/01.jpg" />
+  </body>
+</html>

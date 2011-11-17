@@ -1,0 +1,18 @@
+<!-- 現在の時間からの差を表示するには？ -->
+<!-- 設定次第で日本語で出せる -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.timeago.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("abbr.timeago").timeago();
+      });
+    </script>
+  </head>
+  <body>
+    <abbr class="timeago" title="2011-06-22T09:24:17Z">2011-06-22</abbr>
+  </body>
+</html>

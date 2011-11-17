@@ -1,0 +1,18 @@
+<!-- alertより詳しくオブジェクトの内容を表示するには？ -->
+<!-- デバッグ時に便利 -->
+<!-- console だと Firebug のコンソールに出ている -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.inspect.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $.inspect(["Hello", "World"], "console");
+      });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

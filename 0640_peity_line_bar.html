@@ -1,0 +1,19 @@
+<!-- JSONとかよくわからないけどグラフを表示したい -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="assets/jquery.js" type="text/javascript"></script>
+    <script src="assets/jquery.peity.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#main1").peity("line");
+        $("#main2").peity("bar");
+      });
+    </script>
+  </head>
+  <body>
+    <div id="main1">1,2,3</div>
+    <div id="main2">1,2,3</div>
+  </body>
+</html>
